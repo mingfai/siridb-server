@@ -73,6 +73,7 @@ struct siri_s
     /* socket and promises used for expanding (client) */
     sirinet_stream_t * client;
     uv_timer_t timer;
+    uv_work_t group_work;
 };
 
 #endif  /* SIRI_H_ */
