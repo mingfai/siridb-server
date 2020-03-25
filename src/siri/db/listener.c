@@ -393,7 +393,6 @@ if (IS_MASTER &&                                                              \
         ACCESS_BIT,                                                           \
         query->err_msg))                                                      \
 {                                                                             \
-    /*siridb_query_send_error(handle, CPROTO_ERR_USER_ACCESS);                  \*/
     return;                                                                   \
 }
 
