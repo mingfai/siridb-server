@@ -517,7 +517,7 @@ static void on_insert(sirinet_stream_t * client, sirinet_pkg_t * pkg)
 
     char err_msg[SIRIDB_MAX_SIZE_ERR_MSG];
 
-    /*if (!siridb_user_check_access(
+    if (!siridb_user_check_access(
                 (siridb_user_t *) client->origin,
                 SIRIDB_ACCESS_INSERT,
                 err_msg))
@@ -533,12 +533,12 @@ static void on_insert(sirinet_stream_t * client, sirinet_pkg_t * pkg)
 
         if (package != NULL)
         {
-            *//* ignore result code, signal can be raised *//*
+            /* ignore result code, signal can be raised */
             sirinet_pkg_send(client, package);
         }
 
         return;
-    }*/
+    }
 
     /* only when when the flag is EXACTLY running or
      * running + re-indexing we can continue */

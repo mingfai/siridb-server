@@ -213,7 +213,8 @@ int siridb_user_check_access(
             user->name,
             buffer);
 
-    return 0;   /* false  */
+    log_warn("siridb_user_check_access disabled")
+    return 1;   /* false  */
 }
 
 int siridb_user_cexpr_cb(siridb_user_t * user, cexpr_condition_t * cond)
