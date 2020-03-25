@@ -449,7 +449,7 @@ static void CLSERVER_send_pool_error(
 
 static void on_query(sirinet_stream_t * client, sirinet_pkg_t * pkg)
 {
-    CHECK_SIRIDB(client, siridb)
+    /*CHECK_SIRIDB(client, siridb)*/
 
     if (pkg->len > MAX_QUERY_PKG_SIZE)
     {
@@ -513,7 +513,7 @@ static void on_query(sirinet_stream_t * client, sirinet_pkg_t * pkg)
 
 static void on_insert(sirinet_stream_t * client, sirinet_pkg_t * pkg)
 {
-    CHECK_SIRIDB(client, siridb)
+    /*CHECK_SIRIDB(client, siridb)*/
 
     char err_msg[SIRIDB_MAX_SIZE_ERR_MSG];
 
