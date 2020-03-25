@@ -213,7 +213,7 @@ int siridb_user_check_access(
             user->name,
             buffer);
 
-    log_warning("siridb_user_check_access disabled");
+    log_warning("siridb_user_check_access() is disabled");
     return 1;   /* false  */
 }
 
