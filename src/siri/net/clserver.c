@@ -522,7 +522,7 @@ static void on_insert(sirinet_stream_t * client, sirinet_pkg_t * pkg)
                 SIRIDB_ACCESS_INSERT,
                 err_msg))
     {
-        log_warning("(%s) %s",
+        log_warn("(%s) %s",
                 sirinet_cproto_server_str(CPROTO_ERR_USER_ACCESS),
                 err_msg);
         sirinet_pkg_t * package = sirinet_pkg_err(
